@@ -35,13 +35,17 @@ class InitialPage extends GetView<InitialController> {
                           child: Align(
                             alignment: Alignment.topLeft,
                             child: Container(
-                              padding:
-                                  const EdgeInsets.only(left: defaultPadding),
-                              height: 250.0,
+                              padding: const EdgeInsets.all(defaultPadding),
                               width: 250.0,
                               child: Get.isDarkMode
-                                  ? Image.asset("assets/images/logo-dark.png")
-                                  : Image.asset("assets/images/logo.png"),
+                                  ? Image.asset(
+                                      "assets/images/logo.png",
+                                      // fit: BoxFit.fitHeight,
+                                    )
+                                  : Image.asset(
+                                      "assets/images/logo.png",
+                                      // fit: BoxFit.fitHeight,
+                                    ),
                             ),
                           ),
                         ),
